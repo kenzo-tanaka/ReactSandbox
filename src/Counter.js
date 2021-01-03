@@ -9,6 +9,11 @@ const Counter = () => {
     document.getElementById("effect").innerHTML = `Count is ${count}`;
   });
 
+  // 空の配列を第二引数として渡すと、処理は一度だけ実行される
+  useEffect(() => {
+    alert("このアラートは一回だけ実行されます");
+  }, []);
+
   return (
     <>
       <p>Count: {count}</p>
