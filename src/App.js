@@ -1,5 +1,6 @@
 import Counter from "./Counter";
 import Timer from "./Timer";
+import Increment from "./Increment";
 
 // 大文字である必要がある
 // propsを受け取って、props.name でもアクセスできるが、下記の方が容易
@@ -69,6 +70,7 @@ const App = () => {
       <button onClick={eventHandle}>Event Handle</button>
       <Counter />
       <Timer />
+      <Increment />
     </>
   );
 };
