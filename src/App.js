@@ -1,4 +1,5 @@
 import Counter from "./Counter";
+import Timer from "./Timer";
 
 // 大文字である必要がある
 // propsを受け取って、props.name でもアクセスできるが、下記の方が容易
@@ -67,6 +68,7 @@ function App() {
       <button onClick={() => console.log("clicked!")}>click</button>
       <button onClick={eventHandle}>Event Handle</button>
       <Counter />
+      <Timer />
     </>
   );
 }
