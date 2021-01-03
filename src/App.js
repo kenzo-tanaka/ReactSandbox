@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+const Hello = ({ name }) => {
+  return <h1>Hoge!!! {name}</h1>;
+};
+
+const HelloWorld = ({ firstName, lastName }) => {
+  return (
+    <h2>
+      Hello, {firstName} {lastName}
+    </h2>
+  );
+};
+
+const HelloLanguage = ({ isReact }) => {
+  return isReact ? <p>Hello, React</p> : <p>Hello others</p>;
+};
 
 function App() {
+  const name = "Kenzo";
+  const data = {
+    firstName: "John",
+    lastName: "Doe",
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h2>Hello React!</h2>
+      <p className="hoge">1 + 1 = {1 + 1}</p>
+      <Hello name={name} />
+      <HelloWorld {...data} />
+      <HelloLanguage isReact={true} />
+    </>
   );
 }
 
