@@ -46,6 +46,11 @@ function App() {
     console.log("clicked!");
   };
 
+  const eventHandle = (event) => {
+    event.preventDefault();
+    console.log("Hoge");
+  };
+
   return (
     <>
       <h2>Hello React!</h2>
@@ -58,6 +63,7 @@ function App() {
       <button onClick={handleClick}>Handle!</button>
       {/* 直接書く */}
       <button onClick={() => console.log("clicked!")}>click</button>
+      <button onClick={eventHandle}>Event Handle</button>
     </>
   );
 }
