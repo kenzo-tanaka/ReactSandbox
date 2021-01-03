@@ -1,3 +1,5 @@
+import Counter from "./Counter";
+
 // 大文字である必要がある
 // propsを受け取って、props.name でもアクセスできるが、下記の方が容易
 const Hello = ({ name }) => {
@@ -64,6 +66,7 @@ function App() {
       {/* 直接書く */}
       <button onClick={() => console.log("clicked!")}>click</button>
       <button onClick={eventHandle}>Event Handle</button>
+      <Counter />
     </>
   );
 }
