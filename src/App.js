@@ -38,7 +38,7 @@ const LoopValues = () => {
   );
 };
 
-function App() {
+const App = () => {
   const name = "Kenzo";
   const data = {
     firstName: "John",
@@ -71,6 +71,6 @@ function App() {
       <Timer />
     </>
   );
-}
+};
 
 export default App;
