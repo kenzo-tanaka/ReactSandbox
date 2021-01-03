@@ -1,7 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Counter = () => {
   const [count, setCount] = useState(0);
+
+  // 副作用はコンポーネントの描画後に実行されるので、下記のDOMの操作もできる
+  // コンポーネントは state が更新されるたびに再描画されるので、下記処理も count が切り替わると実行される
+  useEffect(() => {
+    document.getElementById("effect").innerHTML = `Count is ${count}`;
+  });
 
   return (
     <>
@@ -11,6 +17,7 @@ const Counter = () => {
       <button onClick={() => setCount((prevCount) => prevCount + 1)}>
         Add with function.
       </button>
+      <p id="effect"></p>
     </>
   );
 };
